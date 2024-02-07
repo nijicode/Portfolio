@@ -7,7 +7,7 @@
   padding:0;
   margin:0;
   scroll-behavior:smooth;
-  overflow-x:hidden;
+
 }
 :root{
   --first-color:#BBD2C5;
@@ -19,7 +19,7 @@ body{
   font-family:Quicksand,san-serif;
   background-color:var(--mid-color);
   color:var(--font-color1);
-   
+  overflow-x:hidden;
 }
 /* ------------------------general------------------- */
 /* -----------------------navbar--------------------- */
@@ -81,6 +81,7 @@ body{
    justify-content:center;
    /* border:5px solid black; */
    /* line-height:3rem; */
+   overflow-x:hidden;
 }
 .container-1 h1{
   font-size:4rem;
@@ -99,6 +100,7 @@ body{
   border-radius:50%;
   filter:blur(50px);
   z-index:-1;
+  overflow-x:hidden;
 }
 .glass{
     background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
