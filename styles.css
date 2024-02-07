@@ -1,0 +1,232 @@
+/* -----------------------general-------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+*{
+  box-sizing:border-box;
+  padding:0;
+  margin:0;
+  scroll-behavior:smooth;
+  overflow-x:hidden;
+}
+:root{
+  --first-color:#BBD2C5;
+  --mid-color:#536976;
+  --second-color:#292E49;
+  --font-color1:white;
+}
+body{
+  font-family:Quicksand,san-serif;
+  background-color:var(--mid-color);
+  color:var(--font-color1);
+   
+}
+/* ------------------------general------------------- */
+/* -----------------------navbar--------------------- */
+#navbar{
+  position:fixed;
+  top:0;
+  /* left:10vw;  */
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  width:100vw;
+  padding-left:10%;
+   padding-right:10%;
+}
+#navbar #profile-logo{
+  padding:2rem;
+  font-family:Poppins,san-serif;
+  font-weight:700;
+  /* border:5px solid red; */
+}
+#navbar ul{
+  display:flex;
+  padding:1rem;
+  width:40%;
+  justify-content:space-evenly;
+  align-items:center;
+}
+#navbar li{
+  list-style:none;
+  
+}
+#navbar a{
+  text-decoration:none;
+  color:var(--font-color1);
+}
+#profile-logo>span{
+  animation: logo 10s ease-in-out infinite;
+}
+@keyframes logo{
+  0%,50%,100%{
+    color:var(--font-color1);
+    
+  }
+  25%{
+    color:var(--second-color);
+  }
+  75%{
+    color:var(--first-color);
+  }
+}
+/* ---------------------navbar-------------------- */
+/* -------------------hero-------------------- */
+.container-1{
+   padding:1rem;
+   height:100vh;
+   display:flex;
+   flex-direction:column;
+   align-items:center;
+   justify-content:center;
+   /* border:5px solid black; */
+   /* line-height:3rem; */
+}
+.container-1 h1{
+  font-size:4rem;
+  text-shadow: 2px 2px 5px rgba(255,255,255,.4);
+  /* border:2px solid red; */
+  padding:10px;
+}
+.sticky{
+  position:sticky;
+  top:0;
+}
+.circle{
+  width:500px;
+  height:500px;
+  position:absolute;
+  border-radius:50%;
+  filter:blur(50px);
+  z-index:-1;
+}
+.glass{
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    /* border-radius:20px; */
+    border:1px solid rgba(255, 255, 255, 0.18);
+    /* box-shadow: 0 8px 30px 0 rgba(0, 0, 0, 0.37); */
+    z-index:1;
+}
+.circle.left{
+  background-color:var(--first-color);
+  top:-20%;
+  left:-10%;
+  opacity:.5;
+  animation: one 20s linear infinite;
+}
+.circle.right{
+  background-color:var(--second-color);
+  top:30%;
+  right:-30%;
+  opacity:.5;
+  animation: two 20s linear infinite;
+}
+@keyframes one{
+  0%{
+    top:-20%;
+    left:-10%;
+  }
+  25%{
+    top:20%;
+    left:35%
+  }
+  50%{
+     top:30%;
+  left:70%;
+  }
+  75%{
+    top:0%;
+    left:60%
+  }
+  100%{
+    top:-20%;
+    left:-10%;
+  }
+}
+@keyframes two{
+  0%{
+    top:30%;
+  right:-30%;
+  }
+  25%{
+    top:20%;
+    right:40%
+  }
+  50%{
+    top:-20%;
+    right:80%;
+  }
+  75%{
+    top:50%;
+    right:50%
+  }
+  100%{
+    top:30%;
+  right:-30%;
+  }
+}
+.sticky>span{
+  animation: logo 10s ease infinite;
+}
+/* ----------------------hero------------------- */
+/* ----------------------about-------------------- */
+.container-2{
+  /* border:5px solid red; */
+  margin:0 10%;
+  display:flex;
+  /* background:linear-gradient(var(--second-color),var(--second-color)); */
+  flex:wrap;
+  justify-content:space-around;
+}
+.profile-pic{  
+  /* border:5px solid red; */
+  flex-basis:35%;
+}
+.profile-pic img{
+  width:100%;
+  border-radius:20px;
+}
+.about-info{
+  flex-basis:60%;
+  /* border:5px solid red; */
+}
+.sub-title{
+  font-size:3rem;
+  margin:0 0 40px;
+}
+.tab-titles{
+  display:flex;
+  margin:20 0 20px;
+}
+.tab-links{
+  margin-right:50px;
+  font-weight:500;
+  font-size:1.2rem;
+  position:relative;
+  padding:.5rem 0;
+  /* border:5px solid red; */
+}
+.tab-links::after{
+  content: "";
+  width:0;
+  height:5px;
+  position:absolute;
+  left:0;
+  bottom:0;
+  transition:.5s;
+  background:var(--first-color);
+}
+.tab-links.active-links::after{
+  width:50%;
+}
+.tab-contents ul li{
+margin-bottom:10px;
+list-style:none;
+/* border:5px solid red; */
+}
+.tab-contents ul li span{
+  color: var(--first-color);
+  font-weight:500;
+}
