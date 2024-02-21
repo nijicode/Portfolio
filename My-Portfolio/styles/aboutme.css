@@ -1,0 +1,91 @@
+.container-2 {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  align-items: start;
+  min-height: 550px;
+  height: min-content;
+  position: relative;
+}
+.profile-pic {
+  position: sticky;
+  top: 100px;
+  justify-self: center;
+  padding-left: 20px;
+}
+.profile-pic img {
+  width: 300px;
+  height: 300px;
+  border-radius: 50% 10% 50% 10% / 10% 50% 10% 50%;
+  object-fit: cover;
+  object-position: 10% 20%;
+}
+.about-info {
+  width: 100%;
+  height: 100%;
+  padding-bottom: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.sub-title {
+  font-size: 3rem;
+  margin: 0 0 40px;
+}
+.about-me {
+  width: 100%;
+  word-wrap: break-word;
+}
+.tab-titles {
+  display: flex;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  max-width: 360px;
+  justify-content: space-between;
+}
+.tab-links {
+  font-weight: 500;
+  font-size: 1.2rem;
+  position: relative;
+  padding: 0.5rem 0;
+  cursor: pointer;
+  transition: all ease-in-out 0.5s;
+}
+.tab-links:hover {
+  transform: scale(1.2);
+}
+.tab-links::after {
+  content: "";
+  width: 0;
+  height: 5px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  transition: 0.5s;
+  background: var(--first-color);
+}
+.tab-links.active-links::after {
+  width: 50%;
+}
+.tab-contents ul li {
+  margin-bottom: 10px;
+  list-style: none;
+}
+.tab-contents ul li span {
+  color: var(--first-color);
+  font-weight: 500;
+}
+@media (max-width: 710px) {
+  .container-2 {
+    grid-template-columns: 1fr;
+  }
+  .profile-pic {
+    display: none;
+  }
+  .about-info {
+    padding: 10%;
+  }
+}
+#experiences,
+#educations {
+  display: none;
+}

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0";>
+    <title>Personal Portfolio</title>
+    <link rel="icon" type="image/x-icon" href="logo/code.png">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles/navbar.css">
+    <link rel="stylesheet" href="styles/hero.css">
+    <link rel="stylesheet" href="styles/aboutme.css">
+    <link rel="stylesheet" href="styles/contact.css">
+    <link rel="stylesheet" href="styles/works.css">
+  </head>
+  <body>
+    <nav id="navbar" class="glass">
+      <h1 id="profile-logo"><span class="animated-logo">A</span>ldous.</h1>
+      <ul>
+        <li><a href="#welcome-section">home</a></li>
+        <li><a href="#about">about</a></li>
+        <li><a href="#projects">work</a></li>
+        <li><a href="#contact">contact</a></li>
+      </ul>
+    </nav>
+    <main>
+    <section id="welcome-section">
+      <div class="container-1">
+      <div class="circle left"></div>
+      <div class="circle right"></div>
+      <h1>Hey I am <span>Aldous</span></h1>
+      <p>a computer engineer/web developer</p>
+      </div>
+    </section>
+    <div class="profile-info">
+    <section id="about" >
+      <div class="container-2">
+      <div class="profile-pic">
+        <img src="images/me.JPG">
+      </div>
+      <div class="about-info">
+        <h1 class="sub-title">About Me</h1>
+        <p class="about-me">Hi! I'm Aldous, a recent graduate of Computer Engineering, I always love to learn and to explore many things specially in the field of Computer Science and Engineering, particularly focused on programming. My favorite subject has always been programming because it allows me to blend logic and creativity to solve complex problems.<br/><br/>What excites me most about this field is the ever-evolving nature of technology, and I am enthusiastic about staying up-to-date with the latest developments in programming and software engineering.</p>
+        <div class="tab-titles">
+        <p class="tab-links active-links" id="skill" onclick="activeLink('skill');" >Skills</p>
+        <p class="tab-links " id="experience" onclick="activeLink('experience');">Experience</p>
+        <p class="tab-links " id="education" onclick="activeLink('education');">Education</p>
+        </div>
+        <div class="tab-contents" id="skills">
+          <ul>
+            <li><span>UI/UX</span><br>Designing Web/App Interfaces</li>
+            <li><span>Web Development</span><br>Knowledgeable in Html ,CSS, Javascript, PHP, and Sql</li>
+            <li><span>App Development</span><br>Building Android/iOS Applications</li>
+          </ul>
+        </div>
+        <div class="tab-contents" id="experiences">
+          <ul>
+            <li><span>BRU DIGITAL TV<br/>June - August 2022</span><br>250hrs On Job Training as a Video Editor and Graphic Designer</li>
+            <li><span>freeCodeCamp Responsive Web Design Certification<br/>Feb 2024</span><br>Approximately 300 hours of work on responsive web design with 5 completed projects</li>
+          </ul>
+        </div>
+        <div class="tab-contents" id="educations">
+          <ul>
+            <li><span>Bulacan State University<br/>2019 - June 23 2023</span><br>Bachelor of Science in Computer Engineering</li>
+            <li><span>Immaculate Conception International<br/>2017 - 2019</span><br>Science, Technology, Engineering and Mathematics</li>
+          </ul>
+        </div>
+      </div>
+      </div>
+    </section>
+    <section id="projects" >
+      <h1>These are some of my works</h1>
+      <div class="container3">
+        <div class="project-tile" >
+          <a href="https://nijicode.github.io/rock-paper-scissor/" target="_blank">
+         <img class="project-img" src="images/rock-paper-scissors-game.jpg">
+        <div class="glass-card">
+          <h2>Rock, Paper, Scissors</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus provident in, numquam cupiditate, sequi veniam quae et eaque accusamus illo culpa, repudiandae omnis at obcaecati voluptatem ipsa rerum assumenda quas.</p>
+        </div>
+         </a>
+       </div>
+       <div class="project-tile" >
+        <a href="https://nijicode.github.io/Technical-Documentation/" target="_blank">
+       <img class="project-img"  src="images/technical-documentation.jpg">
+         <div class="glass-card">
+           <h2>Technical Documentation </h2>
+           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus provident in, numquam cupiditate, sequi veniam quae et eaque accusamus illo culpa, repudiandae omnis at obcaecati voluptatem ipsa rerum assumenda quas.</p>
+         </div>
+       </a>
+     </div>
+       <div class="project-tile" >
+        <a href="https://nijicode.github.io/Floating--words/" target="_blank">
+       <img class="project-img" src="images/raining-words.jpg">
+         <div class="glass-card">
+           <h2>Raining Words</h2>
+           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus provident in, numquam cupiditate, sequi veniam quae et eaque accusamus illo culpa, repudiandae omnis at obcaecati voluptatem ipsa rerum assumenda quas.</p>
+         </div>
+       </a>
+     </div>
+      <div class="project-tile"  >
+         <a href="https://nijicode.github.io/Tribute-Page/" target="_blank">
+        <img class="project-img" src="images/tribute-page.jpg">
+        <div class="glass-card">
+          <h2>Tribute Page</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus provident in, numquam cupiditate, sequi veniam quae et eaque accusamus illo culpa, repudiandae omnis at obcaecati voluptatem ipsa rerum assumenda quas.</p>
+        </div>
+        </a>
+      </div>
+      
+      <div class="project-tile" >
+        <a href="https://nijicode.github.io/Product-Landing-Page/" target="_blank">
+       <img class="project-img" src="images/product-landing-page.jpg">
+         <div class="glass-card">
+           <h2>Product Landing Page</h2>
+           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus provident in, numquam cupiditate, sequi veniam quae et eaque accusamus illo culpa, repudiandae omnis at obcaecati voluptatem ipsa rerum assumenda quas.</p>
+         </div>
+       </a>
+     </div>
+    
+      <div class="project-tile" >
+        <a href="https://nijicode.github.io/Survey-Form/" target="_blank">
+          <img class="project-img" src="images/survey-form.jpg">
+          <div class="glass-card">
+            <h2>Survey Form</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus provident in, numquam cupiditate, sequi veniam quae et eaque accusamus illo culpa, repudiandae omnis at obcaecati voluptatem ipsa rerum assumenda quas.</p>
+          </div>
+        </a>
+      </div>
+     
+      </div>
+      <button id="see-more" class="btn" onclick="">See More</button>
+    </section>
+    <section id="contact">
+      <div class="container4">
+        <div class="contact-info">
+          <h1>Contact Me</h1>
+          <p><i class="fa-solid fa-paper-plane fa-bounce"></i>estacioaldous@gmail.com</p>
+          <p><i class="fa-solid fa-phone fa-shake"></i></i>+639212698196</p>
+          <div class="social-icons">
+          <a href="https://www.facebook.com/aldous.estacio.5" id="profile-link" target="_blank"><i class="fa-brands fa-facebook "></i></i></a>
+          <a href="https://github.com/nijicode"  target="_blank" ><i class="fa-brands fa-github "></i></a>
+          <a href="https://www.freecodecamp.org/Programmer_Aldous"  target="_blank"><i class="fa-brands fa-free-code-camp "></i></a>
+          <a href="https://www.linkedin.com/in/john-aldous-estacio-9917952a8/"  target="_blank"><i class="fa-brands fa-linkedin "></i></a>
+          </div>
+          <a class="btn btn1" id="download" href="cv/Estacio,Aldous-CV.pdf" download="CV">Download CV</a>
+        </div>
+        <form class="viewer-info">
+          <input type="text" placeholder="Name" required>
+          <input type="email" placeholder="Email" required>
+          <textarea rows="6" placeholder="Message"></textarea>
+          <button type="submit" class="btn">Submit</button>
+        </form>
+      </div>
+    </section>
+    </div>
+    </main>
+    <footer class="glass">
+      <p>Copyright © Aldous 2024. All Rights Reserved</p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
