@@ -16,15 +16,12 @@
   /* border: 5px solid black; */
 }
 .project-tile {
-  width: 100%;
-  max-width: 320px;
+  width: 320px;
   height: 400px;
   object-fit: cover;
-  /* border: 5px solid yellow; */
   cursor: pointer;
   position: relative;
   border-radius: 20px;
-  /* border-radius: 50% 10% 50% 10% / 10% 50% 10% 50%; */
   overflow: hidden;
   transition: all 1s;
   display: none;
@@ -68,11 +65,34 @@
 .project-tile p,
 .project-tile a {
   text-decoration: none;
-  color: black;
-  font-family: poppins, sans-serif;
+  color: var(--font-color2);
+  font-family: quicksand, sans-serif;
 }
 
 #projects h1 {
   margin-bottom: 3rem;
   font-size: 1.5rem;
+}
+.see-more {
+  padding: 2px 20px;
+  border: none;
+  border-radius: 10px;
+  color: var(--first-color);
+  background-color: var(--second-color);
+  cursor: pointer;
+  transition: all ease-in-out 0.5s;
+}
+.see-more:hover {
+  opacity: 0.8;
+  background-color: var(--first-color);
+  color: var(--second-color);
+}
+@media (max-width: 360px) {
+  .project-tile {
+    width: 250px;
+    height: 350px;
+  }
+  #projects h1 {
+    font-size: 1.1rem;
+  }
 }

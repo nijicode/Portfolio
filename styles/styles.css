@@ -1,0 +1,65 @@
+/* -----------------------general-------------------- */
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+  scroll-padding-bottom: 100px;
+  font-family: Quicksand, san-serif;
+}
+:root {
+  --first-color: #bbd2c5;
+  --mid-color: #536976;
+  --second-color: #292e49;
+  --font-color1: white;
+  --font-color2: black;
+  --font-color3: #bbd2c5;
+}
+.dark-theme {
+  --first-color: white;
+  --mid-color: #18181e;
+  --second-color: burlywood;
+  --font-color1: white;
+  --font-color2: black;
+  --font-color3: burlywood;
+}
+body {
+  font-family: Quicksand, san-serif;
+  background-color: var(--mid-color);
+  color: var(--font-color1);
+  transition: 3s;
+}
+.profile-info {
+  /* border: 5px solid brown; */
+  max-width: 1080px;
+  min-width: 320px;
+  width: 100%;
+  margin: auto;
+}
+.glass {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0)
+  );
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  z-index: 1;
+}
+footer {
+  padding: 2rem;
+  display: flex;
+  align-items: flex-end;
+  justify-content: end;
+}
+#projects {
+  display: none;
+}
+#download {
+  text-decoration: none;
+}

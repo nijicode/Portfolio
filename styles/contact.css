@@ -29,6 +29,26 @@
   min-width: 320px;
   max-width: 500px;
 }
+.relative {
+  position: relative;
+}
+
+.error-message {
+  position: absolute;
+  right: 7px;
+  top: 8px;
+  bottom: 0;
+  font-family: Quicksand, sans-serif;
+  font-size: 0.9rem;
+  color: crimson;
+}
+.error-message .valid {
+  color: green;
+}
+.comment {
+  top: auto;
+  bottom: 10px;
+}
 .viewer-info input,
 .viewer-info textarea {
   width: 100%;
@@ -38,21 +58,25 @@
   border: none;
   border-radius: 10px;
   background-color: var(--first-color);
-  color: var(--second-color);
+  color: var(--font-color2);
   font-family: Quicksand, san-serif;
   font-weight: 700;
   resize: none;
   display: block;
+}
+.viewer-info textarea {
+  padding-bottom: 30px;
 }
 
 .btn {
   padding: 10px 20px;
   border: none;
   border-radius: 10px;
-  color: white;
+  color: var(--first-color);
   background-color: var(--second-color);
   cursor: pointer;
   transition: all ease-in-out 0.5s;
+  font-weight: bold;
 }
 .btn:hover {
   font-weight: bold;

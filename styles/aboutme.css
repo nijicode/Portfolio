@@ -61,7 +61,7 @@
   left: 0;
   bottom: 0;
   transition: 0.5s;
-  background: var(--first-color);
+  background: var(--font-color3);
 }
 .tab-links.active-links::after {
   width: 50%;
@@ -71,15 +71,21 @@
   list-style: none;
 }
 .tab-contents ul li span {
-  color: var(--first-color);
-  font-weight: 500;
+  color: var(--font-color3);
+  font-weight: bold;
 }
 @media (max-width: 710px) {
   .container-2 {
     grid-template-columns: 1fr;
   }
   .profile-pic {
-    display: none;
+    position: static;
+    padding-left: 0px;
+  }
+  .profile-pic img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
   }
   .about-info {
     padding: 10%;

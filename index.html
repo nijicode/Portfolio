@@ -6,21 +6,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0";>
     <title>Personal Portfolio</title>
     <link rel="icon" type="image/x-icon" href="logo/code.png">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="styles/navbar.css">
-    <link rel="stylesheet" href="styles/hero.css">
-    <link rel="stylesheet" href="styles/aboutme.css">
-    <link rel="stylesheet" href="styles/contact.css">
-    <link rel="stylesheet" href="styles/works.css">
+    <link rel="stylesheet" type="text/css" href="styles/styles.css">
+    <link rel="stylesheet" type="text/css" href="styles/navbar.css?v=1">
+    <link rel="stylesheet" type="text/css" href="styles/hero.css?v=1">
+    <link rel="stylesheet" type="text/css" href="styles/aboutme.css?v=1">
+    <link rel="stylesheet" type="text/css" href="styles/contact.css?v=1">
+    <link rel="stylesheet" type="text/css" href="styles/works.css?v=1">
   </head>
   <body>
     <nav id="navbar" class="glass">
       <h1 id="profile-logo"><span class="animated-logo">A</span>ldous.</h1>
-      <ul>
+      <a  id="menu-bar"><svg xmlns="http://www.w3.org/2000/svg" height="31" viewBox="0 -960 960 960" width="30"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a>
+      <ul class="top-bar">
         <li><a href="#welcome-section">home</a></li>
         <li><a href="#about">about</a></li>
         <li><a href="#projects">work</a></li>
         <li><a href="#contact">contact</a></li>
+        <i id="dark-theme" onclick="nightTheme(darkTheme);" class="dark-theme fa-solid fa-moon"></i>
+      </ul>
+    </nav>
+    <nav id="side-navbar" class="glass">
+      <ul>
+        <a id="exit-bar" ><svg xmlns="http://www.w3.org/2000/svg" height="31" viewBox="0 -960 960 960" width="31"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a>
+        <li><a href="#welcome-section">home</a></li>
+        <li><a href="#about">about</a></li>
+        <li><a href="#projects">work</a></li>
+        <li><a href="#contact">contact</a></li>
+        <i id="dark" class="fa-solid fa-moon"></i>
       </ul>
     </nav>
     <main>
@@ -28,7 +40,7 @@
       <div class="container-1">
       <div class="circle left"></div>
       <div class="circle right"></div>
-      <h1>Hey I am <span>Aldous</span></h1>
+      <h1>Hi, I'm <span>Aldous</span></h1>
       <p>a computer engineer/web developer</p>
       </div>
     </section>
@@ -129,7 +141,7 @@
       </div>
      
       </div>
-      <button id="see-more" class="btn" onclick="">See More</button>
+      <button id="see-more" class="see-more" onclick=""><i class="fa-solid fa-chevron-down"></i></button>
     </section>
     <section id="contact">
       <div class="container4">
@@ -145,11 +157,20 @@
           </div>
           <a class="btn btn1" id="download" href="cv/Estacio,Aldous-CV.pdf" download="CV">Download CV</a>
         </div>
-        <form class="viewer-info">
-          <input type="text" placeholder="Name" required>
-          <input type="email" placeholder="Email" required>
-          <textarea rows="6" placeholder="Message"></textarea>
-          <button type="submit" class="btn">Submit</button>
+        <form id="myForm" class="viewer-info" action="process-form.php" method="post">
+          <div class="relative">
+          <input id="name" type="text" placeholder="Name" name="name" onkeyup="validateName()">
+          <span class="error-message" id="name-error"></span>
+          </div>
+          <div class="relative">
+          <input id="email" type="email" placeholder="Email" name="email" onkeyup="validateEmail()">
+          <span class="error-message" id="email-error"></span>
+          </div>
+          <div class="relative">
+          <textarea rows="6" placeholder="Message" name="message" id="message" onkeyup="validateMessage()"></textarea>
+          <span class="error-message comment" id="message-error"></span>
+          </div>
+          <button type="submit" class="btn" onclick=" return validateForm();">Submit</button>
         </form>
       </div>
     </section>
@@ -158,6 +179,9 @@
     <footer class="glass">
       <p>Copyright © Aldous 2024. All Rights Reserved</p>
     </footer>
-    <script src="script.js"></script>
+    <script src="script/dark-theme.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.10.5/dist/sweetalert2.all.min.js"></script>
+    <script src="script/script.js"></script>
+    <script src="script/contact-validation.js"></script>
   </body>
 </html>
