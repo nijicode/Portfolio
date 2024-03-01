@@ -12,12 +12,6 @@
   font-family: Quicksand, san-serif;
 }
 :root {
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   --first-color: #bbd2c5;
   --mid-color: #536976;
